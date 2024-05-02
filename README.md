@@ -22,3 +22,38 @@ Our multi-tier serverless application is designed to streamline the process of f
 Overall, our multi-tier serverless application provides a seamless and efficient experience for both customers and restaurant staff, leveraging AWS services to deliver scalability, reliability, and security.
 
 ![Multi-tier-Architecture](image.png)
+
+## Set Up Frontend (S3)
+- On S3 we are going to create an s3 bucket to host the static website (HTML, CSS and JAVASCRIPT)
+- Configure the bucket for static website hosting and enable public access. 
+Resource policy 
+```
+
+```
+- Upload front end files to S3 bucket 
+
+Implement Backend (Lambda, DynamoDB, API Gateway):
+Write Lambda functions to handle menu listing and order management logic in your preferred programming language (e.g., Node.js, Python).
+Create a DynamoDB table to store menu items and orders. Define the table schema based on your data model.
+Set up IAM roles with appropriate permissions for your Lambda functions to access DynamoDB and other AWS services.
+Create RESTful APIs using API Gateway to expose endpoints for menu listing and order management. Configure integration with Lambda functions for each endpoint.
+Configure API Gateway:
+Define resources and methods for the REST API endpoints (e.g., GET /menu, POST /orders).
+Set up request and response mappings to transform data between API Gateway and Lambda functions.
+Enable CORS (Cross-Origin Resource Sharing) if your frontend is hosted on a different domain.
+Integrate Frontend with Backend:
+Update your frontend application to make HTTP requests to the API Gateway endpoints for menu listing and order management.
+Handle responses from the backend and update the user interface accordingly.
+Test the Application:
+Test the functionality of your application by interacting with the frontend and verifying that menu listing and order management work as expected.
+Use tools like AWS CloudWatch for monitoring Lambda function invocations, API Gateway requests, and DynamoDB operations.
+Optimize for Performance and Cost:
+Implement best practices for optimizing performance and reducing costs, such as configuring caching in API Gateway, using DynamoDB auto-scaling, and optimizing Lambda function runtime settings.
+Consider implementing AWS Lambda Provisioned Concurrency for improved performance and reduced cold start times.
+Security and Compliance:
+Implement security best practices, such as encrypting data at rest and in transit, securing API Gateway endpoints with API keys or IAM authorization, and enabling AWS WAF (Web Application Firewall) for additional protection.
+Ensure compliance with relevant regulations and standards (e.g., GDPR, HIPAA) by implementing appropriate security controls and access policies.
+Deployment and Continuous Integration/Continuous Deployment (CI/CD):
+Set up automated deployment pipelines using AWS CodePipeline and AWS CodeBuild to deploy changes to your application in a controlled and repeatable manner.
+Implement automated testing and validation steps in your CI/CD pipeline to ensure the stability and correctness of your application before deployment.
+By following these recommended steps, you can effectively build and deploy a multi-tier serverless application on AWS, leveraging services like S3, API Gateway, Lambda, DynamoDB, and IAM to achieve scalability, reliability, and security.
