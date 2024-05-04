@@ -8,7 +8,7 @@ window.onload = function() {
 };
 
 function fetchMenuItems() {
-    fetch('https://wo083lrv16.execute-api.us-east-2.amazonaws.com/prod/menu')
+    fetch('https://6qjyi136f7.execute-api.us-west-1.amazonaws.com/prod/menu')
     .then(response => response.json())
     .then(data => {
         const menuDiv = document.getElementById('menu');
@@ -32,7 +32,7 @@ function placeOrder() {
     const email = document.getElementById('email').value;
     const itemId = document.getElementById('itemSelect').value;
 
-    fetch('https://wo083lrv16.execute-api.us-east-2.amazonaws.com/prod/order', {
+    fetch('https://6qjyi136f7.execute-api.us-west-1.amazonaws.com/prod', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
