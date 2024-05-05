@@ -1,23 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Welcome to Oncle Sharwarma </title>
-    <link rel="stylesheet" href="styles.css">
+  <title>Oncle Bone Shawarma</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-    <h1>Shawarma Menu</h1>
-    <div id="menu"></div>
-    <h2>Place Your Order</h2>
+  <h1>Welcome to Oncle Bone Shawarma</h1>
+  <div id="menu"></div>
+  <h2 class="imagesHeader">Menu images</h2>
+  <div class="images">
+    <div class="images2">
+      <img src="images/beef-shawarma.jpg" alt="" />
+      <h4>Beef Shawarma</h4>
+    </div>
+    <div class="images3">
+      <img src="images/chicken-shawarma.jpg" alt="" />
+      <h4>Chicken Shawarma</h4>
+    </div>
+    <div class="images4">
+      <img src="images/lamb-shawarma.jpg" alt="" />
+      <h4>Lamb Shawarma</h4>
+    </div>
+  </div>
+  <div id="order-form">
+    <h2>Place an Order</h2>
     <form id="orderForm">
-        <input type="text" id="username" placeholder="Enter Username" required>
-        <input type="email" id="email" placeholder="Enter Email" required>
-        <select id="itemSelect" required>
-            <!-- Menu items will be loaded here -->
-        </select>
-        <button type="submit">Place Order</button>
+      <label for="shawarma-type">Shawarma Type:</label>
+      <select id="itemSelect">
+        <!-- Options will be added dynamically through JavaScript -->
+      </select>
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" min="1" value="1" />
+      <label for="customer-name">Customer Name:</label>
+      <input type="text" id="username" />
+      <label for="email">Email:</label>
+      <input type="email" id="email" />
+      <button type="submit" id="place-order">Place Order</button>
     </form>
-    <script src="script.js"></script>
+  </div>
+  <div id="order-response"></div>
+  <script src="script.js"></script>
 </body>
 </html>

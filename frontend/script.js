@@ -32,7 +32,7 @@ function placeOrder() {
     const email = document.getElementById('email').value;
     const itemId = document.getElementById('itemSelect').value;
 
-    fetch('https://6qjyi136f7.execute-api.us-west-1.amazonaws.com/prod', {
+    fetch('https://6qjyi136f7.execute-api.us-west-1.amazonaws.com/prod/order', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
